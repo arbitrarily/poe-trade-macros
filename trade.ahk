@@ -1,9 +1,14 @@
-F1::InviteCommand()
-F2::TradeHideoutCommand()
+; I use these to swap left ctrl and left alt on windows
+
+; LCtrl::Alt
+; LAlt::Ctrl		
+
+; F1::InviteCommand()
+; F2::TradeHideoutCommand()
 F3::LastTYCommand()
 F4::LeavePartyCommand()
 F5::HideoutCommand()
-F6::LastTradeCommand()
+; F6::LastTradeCommand()
 
 IfWinActive, Path of Exile
 {
@@ -40,9 +45,9 @@ IfWinActive, Path of Exile
 
 	LastTYCommand(){
 		BlockInput On
-		Send {Enter}
+		Send ^{Enter}
 		Sleep 1
-		Send @last ty
+		Send ty
 		Send {Enter}
 		BlockInput Off
 		return
